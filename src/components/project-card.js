@@ -1,6 +1,8 @@
 import React from "react";
 import '../css/projects.css'
 
+import {Link} from 'react-router-dom'
+
 const ProjectCard = (props) => {
 
     return (
@@ -27,7 +29,7 @@ const ProjectCard = (props) => {
                 object-cover
             " src= {props.thumbnailSrc} alt="Avatar"/>
         </div>
-        <a href="/" className="
+        <Link to="/flipcard" className="
             projects_grid_item_button
             w-10
             h-10
@@ -41,7 +43,7 @@ const ProjectCard = (props) => {
                 h-full
                 invert
             " src="/arrow-right-up-line.svg" alt="None"/>
-        </a>
+        </Link>
         <div className="
             projects_grid_item_info
             w-full

@@ -7,6 +7,10 @@ import Contact from "../components/contact";
 
 import ScrollReveal from "scrollreveal";
 
+import transition from '../components/transition'
+
+import {motion} from 'framer-motion'
+
 const Home = () => {
     
   useEffect(() => {
@@ -35,7 +39,13 @@ const Home = () => {
   })
 
     return (
-    <div className="h-full w-full flex-col justify-center items-center m-0 bg-[var(--body-color)]">
+    <div 
+    className="h-full w-full flex-col justify-center items-center m-0 bg-[var(--body-color)]"
+    // initial={{opacity: 0}}
+    // animate={{opacity: 1}}
+    // exit={{x:-300, opacity: 0}}
+    // transition = {{duration: 1}}
+    >
       <Intro />
       <About />
       <Projects />
@@ -43,4 +53,4 @@ const Home = () => {
     </div>)
 }
 
-export default Home;
+export default transition(Home);
