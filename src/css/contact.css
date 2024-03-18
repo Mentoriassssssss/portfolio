@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.contact_title::after {
+    content:'';
+    width: 4rem;
+    height: 2.7rem;
+    position: absolute;
+    background-color: rgba(var(--first-color-rgb), 0.2);
+    transform: translate(15rem, -.5rem);
+}
+
+.contact_title {
+    transform: translate(-22.7rem, -8rem)
+}
+
+.contact_geometricbox {
+    transform: translate(17rem, -16rem) rotate(55deg);
+}
+
+.contact_geometricbox_border {
+    transform: translate(-25%,-70%);
+}
+
+.contact_note {
+    transform: translate(3.5rem);
+}
+
+.contact_curvedarrow {
+    transform: translate(10rem, 6rem) rotate(65deg)
+}
+
+.contact_note_social_icon {
+    cursor: pointer;
+    transition: background-color .3s;
+}
+.contact_note_social_icon:hover {
+    background-color: var(--black-color-light);
+    transition: background-color .3s;
+}
+
+.contact_mailbox_form_name {
+    width: calc(50% - .25rem);
+}
+.contact_mailbox_form_mail {
+    width: calc(50% - .25rem);
+}
+
+.contact_note_social {
+    left: 0;
+    transform: translate(calc(30vw - 11.5rem + 3.1rem), 30vh)
+}
+
+@media screen and (max-width: 1400px) {
+    .contact_title:after {
+        width: 2rem;
+        height: 1.3rem;
+    }
+
+    .contact_note {
+        transform: translate(0,0);
+    }
+    .contact_note_social {
+        transform: translate(0, 0);
+    }
+
+    .contact_title {
+        z-index: 2;
+        transform: translate(0, -29rem);
+    }
+
+    .contact_title:after {
+        width: 2rem;
+        height: 1.3rem;
+        transform: translate(7.5rem);
+    }
+
+    .contact_curvedarrow {
+        transform: translate(8.8rem, 44.5rem) rotate(30deg);
+    }
+    .contact_geometricbox {
+        transform: translate(17.5rem, -13rem) rotate(55deg);
+    }
+}

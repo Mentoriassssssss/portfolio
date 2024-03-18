@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.projects_title::after {
+    content:'';
+    width: 4rem;
+    height: 2.7rem;
+    position: absolute;
+    background-color: rgba(var(--first-color-rgb), 0.2);
+    transform: translate(9rem, -.5rem);
+}
+
+.projects_grid_item {
+    transition: background-color .3s;
+}
+
+.projects_grid_item:hover {
+    background-color: white;
+    transition: background-color .3s;
+}
+
+.projects_grid_item_button {
+    transform: translate(6rem, calc(12rem - 50%));
+    transition: background-color .3s;
+}
+
+.projects_grid_item_button:hover {
+    background-color: var(--first-color);
+    transition: background-color .3s;
+}
+
+.projects_grid_item_info_category::before {
+    content:'';
+    width: 1.5rem;
+    height: .1rem;
+    background-color: var(--text-color-light);
+    margin-right: .25rem;
+    transform: translate(0, .625rem)
+}
+
+.projects_grid_item_moreabout_github {
+    transition: color .3s;
+}
+.projects_grid_item_moreabout_github:hover {
+    color: var(--first-color);
+    transition: color .3s;
+}
+.projects_grid_item_moreabout_demo {
+    transition: color .3s;
+}
+.projects_grid_item_moreabout_demo:hover {
+    color: var(--first-color);
+    transition: color .3s;
+}
+
+@media screen and (max-width: 1400px) {
+    .projects_title::after {
+        width: 2rem;
+        height: 1.3rem;
+        transform: translate(4.7rem)
+    }
+
+    .projects_grid_item_button {
+        transform: translate(calc(35vw - 3rem), calc(12rem - 50%));
+    }
+}
