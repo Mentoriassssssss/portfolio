@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
 
+import Navbar from "../components/navbar";
 import Intro from "../components/intro";
 import About from "../components/about";
 import Projects from "../components/projects";
@@ -8,8 +9,6 @@ import Contact from "../components/contact";
 import ScrollReveal from "scrollreveal";
 
 import transition from '../components/transition'
-
-import {motion} from 'framer-motion'
 
 const Home = () => {
     
@@ -46,6 +45,7 @@ const Home = () => {
     // exit={{x:-300, opacity: 0}}
     // transition = {{duration: 1}}
     >
+      <Navbar/>
       <Intro />
       <About />
       <Projects />

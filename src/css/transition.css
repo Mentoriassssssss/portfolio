@@ -10,6 +10,7 @@
     width: 100vw;
     background: black;
     transform-origin: top;
+    z-index: 1000;
 }
 
 .transition_slide_out {
@@ -20,4 +21,5 @@
     width: 100vw;
     background: black;
     transform-origin: bottom;
+    z-index: 1000;
 }

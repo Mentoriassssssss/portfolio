@@ -13,10 +13,14 @@ const Navbar = () => {
         const scrollActive = () => {
             const scrollDown = window.scrollY;
             sectionsProps.forEach(current => {
-                console.log(current)
-                if (scrollDown > (current.top - 50) && scrollDown <= (current.top + current.height - 50))
-                    document.getElementById('nav_' + current.id).classList.add('active');
-                else document.getElementById('nav_' + current.id).classList.remove('active');
+                if (scrollDown > (current.top - 50) && scrollDown <= (current.top + current.height - 50)) {
+                    let activeLink = document.getElementById('nav_' + current.id);
+                    if (activeLink) activeLink.classList.add('active');
+                }
+                else {
+                    let deactiveLink = document.getElementById('nav_' + current.id)
+                    if (deactiveLink) deactiveLink.classList.remove('active');
+                }
             })
         }
         window.addEventListener('scroll', scrollActive)
@@ -108,7 +112,7 @@ const Navbar = () => {
                 </div>
                 <li onClick={() => handleNavOnClick("nav_intro")} className="nav_item flex justify-center items-center">
                     <Link className="nav_link w-28 h-12 justify-center items-center flex" smooth={true} offset={-30} duration={500} to="intro">
-                        <p className="nav_link_text" id="nav_intro">Home</p>
+                        <p className="nav_link_text active" id="nav_intro">Home</p>
                     </Link>
                 </li>
                 <li onClick={() => handleNavOnClick("nav_about")} className="nav_item flex justify-center items-center">

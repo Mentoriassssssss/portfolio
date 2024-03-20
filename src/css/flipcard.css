@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.flipcard_card {
+    perspective: 3200px;
+    transform-style: preserve-3d;
+}
+
+.flipcard_card_front {
+    position: relative;
+}
+
+.flipcard_card_front,
+.flipcard_card_back {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    transition: transform 1s ease-in-out;
+    backface-visibility: hidden;
+    border-color: black;
+    border-width: 4px;
+}
+
+.flipcard_card_back {
+    transform: rotateY(-180deg);
+}
+
+
+.flipcard_active {
+    transform: rotateY(0deg);
+}
+.flipcard_deactive {
+    transform: rotateY(180deg);
+}
