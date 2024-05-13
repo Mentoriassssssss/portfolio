@@ -2,37 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+.flipcard_cardgrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: 10px;
+    width: 70%;
+}
+
 .flipcard_card {
     perspective: 3200px;
     transform-style: preserve-3d;
 }
 
+.flipcard_card_back,
 .flipcard_card_front {
-    position: relative;
-}
-
-.flipcard_card_front,
-.flipcard_card_back {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+    transition: transform 1000ms ease-in-out;
     width: 100%;
-    transition: transform 1s ease-in-out;
-    backface-visibility: hidden;
+    aspect-ratio: 2/3;
+    object-fit: contain;
+    border-radius: 4px;
     border-color: black;
-    border-width: 4px;
+    border-width: 3px;
+    background-color: var(--body-color);
+    backface-visibility: hidden;
 }
 
-.flipcard_card_back {
+.flipcard_card_front {
+    position: absolute;
     transform: rotateY(-180deg);
 }
 
-
-.flipcard_active {
+.front_flipped {
     transform: rotateY(0deg);
 }
-.flipcard_deactive {
+
+.back_flipped {
     transform: rotateY(180deg);
+}
+
+.flipcard_start {
+    transition: all .3s;
+}
+
+.flipcard_start:hover {
+    background-color: var(--first-color);
+    transition: all .3s;
+}
+
+@media screen and (max-width: 1400px) {
+    .flipcard_cardgrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }

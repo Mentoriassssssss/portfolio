@@ -111,7 +111,7 @@ const Intro = () => {
                     flex-row
                     flex
                 ">
-                    <p className="text-center 2xl:text-start"><b className="intro_job_title">Front-end developer</b>, with passion and enthusiasm in website and application development, I keep on learning and improving over time. Graduand in Advanced Program of Computer Science (APCS).
+                    <p className="text-center 2xl:text-start"><span className="intro_job_title"><b>Front-end developer</b>, w</span>ith passion and enthusiasm in website and application development, I keep on learning and improving over time. Graduand in Advanced Program of Computer Science (APCS).
                     </p>
                 </div>
                 <div className="

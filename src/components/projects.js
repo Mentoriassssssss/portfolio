@@ -1,9 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../css/projects.css'
 import ProjectCard from "./project-card";
 
 const Projects = () => {
 
+    const [array, setArray] = useState(
+        [
+            {
+                thumbnailSrc: "/avatar.jpg",
+                title:"Project 1",
+                category:"Website",
+                description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            },
+            {
+                thumbnailSrc: "/avatar.jpg",
+                title:"Project 2",
+                category:"Website",
+                description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            },
+            {
+                thumbnailSrc: "/avatar.jpg",
+                title:"Project 3",
+                category:"Website",
+                description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            },
+            {
+                thumbnailSrc: "/avatar.jpg",
+                title:"Project 4",
+                category:"Website",
+                description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            },
+            {
+                thumbnailSrc: "/avatar.jpg",
+                title:"Project 5",
+                category:"Website",
+                description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            },
+        ]
+    );
+    
     return (
     <section
     id="projects"
@@ -44,36 +79,15 @@ const Projects = () => {
             grid-cols-1
             gap-8
         ">
+           {array.map((item) => {
+            return (
             <ProjectCard
-                thumbnailSrc={"/avatar.jpg"}
-                title={"Project 1"}
-                category={"Website"}
-                description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
-            />
-            <ProjectCard
-                thumbnailSrc={"/avatar.jpg"}
-                title={"Project 1"}
-                category={"Website"}
-                description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
-            />
-            <ProjectCard
-                thumbnailSrc={"/avatar.jpg"}
-                title={"Project 1"}
-                category={"Website"}
-                description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
-            />
-            <ProjectCard
-                thumbnailSrc={"/avatar.jpg"}
-                title={"Project 1"}
-                category={"Website"}
-                description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
-            />
-            <ProjectCard
-                thumbnailSrc={"/avatar.jpg"}
-                title={"Project 1"}
-                category={"Website"}
-                description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
-            />
+                thumbnailSrc = {item.thumbnailSrc}
+                title = {item.title}
+                category = {item.category}
+                description = {item.description}
+            />)
+           })}
         </div>
     </section>)
 }

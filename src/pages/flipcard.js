@@ -1,131 +1,139 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import '../css/flipcard.css'
 
 import transition from "../components/transition";
+import SingleCard from "../components/single-card";
+
+const cardsImage = [
+    { 'src': '/flipcard/helmet.png', matched: false },
+    { 'src': '/flipcard/potion.png', matched: false},
+    { 'src': '/flipcard/ring.png', matched: false },
+    { 'src': '/flipcard/scroll.png', matched: false},
+    { 'src': '/flipcard/shield.png', matched: false },
+    { 'src': '/flipcard/sword.png', matched: false },
+]
 
 const FlipCardPage = () => {
 
-    const [words, setWords] = useState();
-    const [word, setWord] = useState();
-    const [meaning, setMeaning] = useState();
+    const [cards, setCards] = useState([]);
+    const [turns, setTurns] = useState(0);
+    const [cardOne, setCardOne] = useState(null);
+    const [cardTwo, setCardTwo] = useState(null);
+    const [disabled, setDisabled] = useState(false);
+    const [isGameStarted, setIsGameStarted] = useState(false);
 
-    useEffect(() => {
-        let p = new Promise(async (resolve) => {
-            let temp = await fetch('words.txt').then(res => res.text()).then(text => {
-                let items = text.split('\n');
-                items.forEach((item, index) => {
-                    items[index] = item.split(': ')
-                })
-                return items
-            })
-            resolve(temp)
-        })
+    const navigate = useNavigate();
 
-        p.then(res => {
-            setWords(res);
-            let temp = res[Math.floor(Math.random() * res.length)];
-            setWord(temp[0]);
-            setMeaning(temp[1]);
-        })
+    const shuffleCards = () => {
+        setIsGameStarted(true);
+        const shuffledCards = [...cardsImage, ...cardsImage]
+            .sort(() => Math.random() - 0.5)
+            .map((card) => ({ ...card, id: Math.random() }))
 
-        console.log(1)
-    },[])
-
-    const handleFrontClick = () => {
-        const front = document.getElementsByClassName('flipcard_card_front')[0];
-        front.classList.add('flipcard_deactive');
-
-        const back = document.getElementsByClassName('flipcard_card_back')[0];
-        back.classList.add('flipcard_active');
+        setCards(shuffledCards)
+        setTurns(0)
     }
 
-    const handleBackClick = () => {
-        setTimeout(() => {
-            let temp = words[Math.floor(Math.random() * words.length)];
-            setWord(temp[0]);
-            setMeaning(temp[1]);
-        }, 500)
+    const handleChoice = (card) => {
+        if (cardOne === null) {
+            setCardOne(card);
+        } else {
+            if (cardOne.id !== card.id) {
+                setCardTwo(card);
+            }
+        }
+    }
 
-        const front = document.getElementsByClassName('flipcard_card_front')[0];
-        front.classList.remove('flipcard_deactive');
+    useEffect (() => {
+        console.log("card one: ", cardOne,"card two: ", cardTwo)
+        if (cardOne && cardTwo) {
+            setDisabled(true);
+            if (cardOne.src === cardTwo.src) {
+                setCards((prevCards) => {
+                    return prevCards.map((card) => {
+                        if (card.src === cardOne.src) {
+                            return {...card, matched: true}
+                        } else {
+                            return card;
+                        }
+                    })
+                })
+                resetTurn();
+            } else {
+                setTimeout(() => resetTurn(), 1000);
+            }
+        }
+    },[cardOne, cardTwo])
 
-        const back = document.getElementsByClassName('flipcard_card_back')[0];
-        back.classList.remove('flipcard_active');
+    const resetTurn = () => {
+        setCardOne(null);
+        setCardTwo(null);
+        setTurns(turns => turns + 1);
+        setDisabled(false);
     }
 
     return (
         <div
             className="
-            flex
-            items-center
-            justify-center
             h-screen
+            w-screen
+            bg-[var(--container-color)]
+            flex
+            justify-center
+            items-center
+            flex-col
         ">
+            <div
+                className="
+                flipcard_cardgrid
+            ">
+                {cards.map(card => (
+                    <SingleCard
+                        key={card.id}
+                        card={card}
+                        handleChoice={handleChoice}
+                        flipped={card === cardOne || card === cardTwo || card.matched}
+                        disabled={disabled}
+                    />))}
+            </div>
+            
             <div 
                 className="
-                relative
-                flipcard_card
-                h-[50vh]
-                w-[50vw]
-                font-semibold
-            ">
-            <div
-                onClick={handleFrontClick}
-                className="
-                flipcard_card_front
-                bg-[var(--text-color-light)]
-            ">
-                
-                <p 
-                    className="
-                    2xl:text-2xl
-                    text-md
-                    absolute
-                    2xl:top-16
-                    top-8
-                ">Word</p>
-                <p
-                    id="flipcard_word"
-                    className="
-                    w-full
-                    p-4
-                    2xl:text-3xl
-                    text-xl
-                    flex
-                    justify-center
-                    items-center
-                ">{word ? word : 'Words'}</p>
-            </div>
-            <div
-                onClick={handleBackClick}
-                className="
-                flipcard_card_back
-                absolute
-                top-0
-                bg-[var(--black-color-light)]
+                flipcard_start
+                w-48
+                h-12
+                flex
+                justify-center
+                items-center
+                bg-black
                 text-white
-            ">
-                <p 
-                    className="
-                    2xl:text-2xl
-                    text-md
-                    absolute
-                    2xl:top-16
-                    top-8
-                ">Meaning</p>
-                <p
-                    id='flipcard_meaning'
-                    className="
-                    2xl:text-3xl
-                    text-xl
-                    flex
-                    justify-center
-                    items-center
-                    w-full
-                    p-4
-                ">{meaning ? meaning : "Meaning"}</p>
+                2xl:text-lg
+                text-md
+                2xl:mt-8
+                mt-4
+                cursor-pointer
+                "
+                onClick={shuffleCards}>
+                {!isGameStarted ? "New game" : "Reset"}
             </div>
+            <div className="
+            flex
+            justify-center
+            items-center
+            2xl:h-12 h-8
+            2xl:w-12 w-8
+            absolute
+            top-0
+            left-0
+            2xl:m-8 m-4
+            cursor-pointer"
+            onClick={() => navigate(-1)}>
+                <img src="/back.png" 
+                className="
+                2xl:h-6 h-4
+                2xl:w-6 w-4"/>
             </div>
         </div>
     )

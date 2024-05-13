@@ -1,5 +1,6 @@
 import React from "react";
 import '../css/about.css';
+import { Link } from "react-scroll";
 
 const About = () => {
     return (
@@ -179,7 +180,7 @@ const About = () => {
                     2xl:w-fit
                     2xl:justify-start
                 ">
-                    <a href="#contact" className="
+                    <Link smooth={true} offset={-30} duration={500} to="contact" className="
                         about_contact_button
                         flex
                         flex-row
@@ -203,7 +204,7 @@ const About = () => {
                             mr-2
                         " src="/send-plane-line.svg" alt="Send"/>
                         Contact me
-                    </a>
+                    </Link>
                     <a href= 'https://www.linkedin.com/in/pghuy18/' target="blank" className="
                         about_contact_linkedin
                         2xl:w-12

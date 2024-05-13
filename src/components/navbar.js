@@ -106,7 +106,7 @@ const Navbar = () => {
             justify-end
             items-center
         ">
-            <ul className="nav flex 2xl:flex-row flex-col justify-center items-center">
+            <ul className="nav flex 2xl:flex-row flex-col justify-center items-center" >
                 <div className="nav_item cursor-default flex-row nav_menu_title w-28 h-12 justify-center items-center font-bold text-xl">
                     <p>Menu</p>
                 </div>
