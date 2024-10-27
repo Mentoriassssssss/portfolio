@@ -1,6 +1,7 @@
 import React, {useRef} from "react";
 import '../css/contact.css';
 import emailjs from '@emailjs/browser';
+import { Link } from "react-router-dom";
 
 const Contact = () => {
 
@@ -261,19 +262,18 @@ const Contact = () => {
                 flex
                 flex-row
                 2xl:justify-start
-                justify-between
+                justify-center
+                gap-4
+                2xl: gap-0
                 items-center
                 2xl:w-[10rem]
                 w-full
             ">
                     <div className="contact_note_social_icon h-8 w-8 p-2 flex justify-center items-center 2xl:ml-4 bg-[var(--text-color)]">
-                        <a href="#facebook"><img className="invert w-[1rem] h-[1rem]" src="/facebook-fill.svg" alt="Social icons" /></a>
+                        <Link to={"https://www.facebook.com/lullaby.for.ur.soul/"}><img className="invert w-[1rem] h-[1rem]" src="/facebook-fill.svg" alt="Social icons" /></Link>
                     </div>
                     <div className="contact_note_social_icon h-8 w-8 p-2 flex justify-center items-center 2xl:ml-4 bg-[var(--text-color)]">
-                        <a href="#facebook"><img className="invert w-[1rem] h-[1rem]" src="/instagram-line.svg" alt="Social icons" /></a>
-                    </div>
-                    <div className="contact_note_social_icon h-8 w-8 p-2 flex justify-center items-center 2xl:ml-4 bg-[var(--text-color)]">
-                        <a href="#facebook"><img className="invert w-[1rem] h-[1rem]" src="/linkedin-box-line.svg" alt="Social icons" /></a>
+                        <Link href="https://github.com/Mentoriassssssss"><img className="invert w-[1rem] h-[1rem]" src="/github-line.svg" alt="Social icons" /></Link>
                     </div>
                 </div>
             </div>
