@@ -29,7 +29,7 @@ const ProjectCard = (props) => {
                 object-cover
             " src= {props.thumbnailSrc} alt="Avatar"/>
         </div>
-        <Link to="/flipcard" className="
+        <Link to={props.link} className="
             projects_grid_item_button
             w-10
             h-10

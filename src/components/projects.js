@@ -8,34 +8,18 @@ const Projects = () => {
         [
             {
                 thumbnailSrc: "/avatar.jpg",
-                title:"Project 1",
-                category:"Website",
-                description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                title:"Flipcard",
+                category:"Mini game",
+                description:"Matching flip cards game",
+                link: '/flipcard',
             },
             {
                 thumbnailSrc: "/avatar.jpg",
-                title:"Project 2",
+                title:"Expense Tracker",
                 category:"Website",
-                description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            },
-            {
-                thumbnailSrc: "/avatar.jpg",
-                title:"Project 3",
-                category:"Website",
-                description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            },
-            {
-                thumbnailSrc: "/avatar.jpg",
-                title:"Project 4",
-                category:"Website",
-                description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            },
-            {
-                thumbnailSrc: "/avatar.jpg",
-                title:"Project 5",
-                category:"Website",
-                description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            },
+                description:"A simple expense tracker website",
+                link: 'https://expensetracker-front.netlify.app/',
+            }
         ]
     );
     
@@ -86,6 +70,7 @@ const Projects = () => {
                 title = {item.title}
                 category = {item.category}
                 description = {item.description}
+                link = {item.link}
             />)
            })}
         </div>
