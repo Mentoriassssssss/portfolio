@@ -7,18 +7,20 @@ const Projects = () => {
     const [array, setArray] = useState(
         [
             {
-                thumbnailSrc: "/avatar.jpg",
+                thumbnailSrc: "/projects.jpg",
                 title:"Flipcard",
                 category:"Mini game",
                 description:"Matching flip cards game",
                 link: '/flipcard',
+                src: 'https://github.com/Mentoriassssssss/portfolio'
             },
             {
-                thumbnailSrc: "/avatar.jpg",
+                thumbnailSrc: "/projects.jpg",
                 title:"Expense Tracker",
                 category:"Website",
-                description:"A simple expense tracker website",
+                description:"Fullstack expense tracker",
                 link: 'https://expensetracker-front.netlify.app/',
+                src: 'https://github.com/Mentoriassssssss/expense-tracker-front'
             }
         ]
     );
@@ -71,6 +73,7 @@ const Projects = () => {
                 category = {item.category}
                 description = {item.description}
                 link = {item.link}
+                src = {item.src}
             />)
            })}
         </div>

@@ -46,7 +46,7 @@ const Intro = () => {
                     z-[2]
                     object-cover
                     "
-                        src="/avatar.jpg" alt="Avatar" />
+                        src="/avatar3.jpg" alt="Avatar" />
                     <div className="
                     relative
                     w-full

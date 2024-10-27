@@ -89,13 +89,9 @@ const ProjectCard = (props) => {
                 cursor-pointer
                 mr-4
             ">
+                <Link to={props.src}>
                 <i className="ri-github-line"> </i>Source
-            </div>
-            <div className="
-                projects_grid_item_moreabout_demo
-                cursor-pointer
-            ">
-                <i className="ri-play-line"> </i>Demo
+                </Link>
             </div>
         </div>
     </div>
