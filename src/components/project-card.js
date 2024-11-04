@@ -90,7 +90,7 @@ const ProjectCard = (props) => {
                 mr-4
             ">
                 <Link to={props.src}>
-                <i className="ri-github-line"> </i>Source
+                <i className="ri-github-line"> </i>Source code
                 </Link>
             </div>
         </div>

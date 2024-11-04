@@ -273,6 +273,9 @@ const Contact = () => {
                         <Link to={"https://www.facebook.com/lullaby.for.ur.soul/"}><img className="invert w-[1rem] h-[1rem]" src="/facebook-fill.svg" alt="Social icons" /></Link>
                     </div>
                     <div className="contact_note_social_icon h-8 w-8 p-2 flex justify-center items-center 2xl:ml-4 bg-[var(--text-color)]">
+                        <Link href="https://www.linkedin.com/in/huy-ph%E1%BA%A1m-810108335/"><img className="invert w-[1rem] h-[1rem]" src="/github-line.svg" alt="Social icons" /></Link>
+                    </div>
+                    <div className="contact_note_social_icon h-8 w-8 p-2 flex justify-center items-center 2xl:ml-4 bg-[var(--text-color)]">
                         <Link href="https://github.com/Mentoriassssssss"><img className="invert w-[1rem] h-[1rem]" src="/github-line.svg" alt="Social icons" /></Link>
                     </div>
                 </div>

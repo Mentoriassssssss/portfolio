@@ -1,5 +1,6 @@
 import React from "react";
 import '../css/intro.css';
+import { Link } from "react-router-dom";
 
 const Intro = () => {
 
@@ -71,13 +72,22 @@ const Intro = () => {
                     mt-4
                 ">
                     <div className="intro_contacts w-[1.5rem] h-[1.5rem] 2xl:w-[3rem] 2xl:h-[3rem] flex justify-center items-center m-4 text-white bg-[var(--black-color-light)]">
-                        <a href="#github"><img className="invert w-[1rem] h-[1rem] 2xl:w-[1.5rem] 2xl:h-[1.5rem]" src="/github-line.svg" alt="Social icons"/></a>
+                        <Link to="https://github.com/Mentoriassssssss">
+                            <img className="invert w-[1rem] h-[1rem] 2xl:w-[1.5rem] 2xl:h-[1.5rem]"
+                            src="/github-line.svg" alt="Social icons"/>
+                            </Link>
                     </div>
                     <div className="intro_contacts w-[1.5rem] h-[1.5rem] 2xl:w-[3rem] 2xl:h-[3rem] flex justify-center items-center m-4 text-white bg-[var(--black-color-light)]">
-                        <a href="#linkedin"><img className="invert w-[1rem] h-[1rem] 2xl:w-[1.5rem] 2xl:h-[1.5rem]" src="/linkedin-box-line.svg" alt="Social icons"/></a>
+                        <Link to="https://www.linkedin.com/in/huy-ph%E1%BA%A1m-810108335/">
+                            <img className="invert w-[1rem] h-[1rem] 2xl:w-[1.5rem] 2xl:h-[1.5rem]"
+                            src="/linkedin-box-line.svg" alt="Social icons"/>
+                            </Link>
                     </div>
                     <div className="intro_contacts w-[1.5rem] h-[1.5rem] 2xl:w-[3rem] 2xl:h-[3rem] flex justify-center items-center m-4 text-white bg-[var(--black-color-light)]">
-                        <a href="#facebook"><img className="invert w-[1rem] h-[1rem] 2xl:w-[1.5rem] 2xl:h-[1.5rem]" src="/facebook-fill.svg" alt="Social icons"/></a>
+                        <Link to="https://www.facebook.com/lullaby.for.ur.soul">
+                        <img className="invert w-[1rem] h-[1rem] 2xl:w-[1.5rem] 2xl:h-[1.5rem]"
+                        src="/facebook-fill.svg" alt="Social icons"/>
+                        </Link>
                     </div>
                 </div>
             </div>
