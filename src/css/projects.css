@@ -54,7 +54,7 @@
     transition: color .3s;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
     .projects_title::after {
         width: 2rem;
         height: 1.3rem;

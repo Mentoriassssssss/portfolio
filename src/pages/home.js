@@ -12,7 +12,7 @@ const Home = () => {
 
     return (
     <div 
-    className="h-full w-full flex-col justify-center items-center m-0 bg-[var(--body-color)]"
+    className="h-full w-full flex flex-col justify-center items-center m-0 bg-[var(--body-color)]"
     >
       <Navbar/>
       <Intro />

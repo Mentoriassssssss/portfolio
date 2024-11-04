@@ -49,7 +49,7 @@
     transition: all .3s;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1300px) {
     .flipcard_cardgrid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }

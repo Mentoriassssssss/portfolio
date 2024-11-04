@@ -70,7 +70,7 @@
     transition: .3s;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
     .about_avatar_shadow {
         transform: translate(4.5rem)
     }

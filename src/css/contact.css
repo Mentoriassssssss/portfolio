@@ -52,7 +52,7 @@
     transform: translate(calc(30vw - 11.5rem + 3.1rem), 30vh)
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
     .contact_title:after {
         width: 2rem;
         height: 1.3rem;
