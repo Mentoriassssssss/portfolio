@@ -61,7 +61,7 @@
     transform: translate(-25%,-70%)
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1530px) {
     .intro_geometricbox {
         transform: translate(-4.5rem,-10rem) rotate(55deg)
     }

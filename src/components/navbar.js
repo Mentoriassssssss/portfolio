@@ -76,7 +76,7 @@ const Navbar = () => {
         flex-row
         items-center
         justify-between
-        2xl:px-32
+        xl:px-32
         px-8
         fixed
         top-0
@@ -92,7 +92,7 @@ const Navbar = () => {
             text-[var(--black-color)]
             w-[30%]
             flex
-            2xl:justify-start
+            xl:justify-start
             text-lg
             font-semibold
         ">
@@ -106,7 +106,7 @@ const Navbar = () => {
             justify-end
             items-center
         ">
-            <ul className="nav flex 2xl:flex-row flex-col justify-center items-center" >
+            <ul className="nav flex xl:flex-row flex-col justify-center items-center" >
                 <div className="nav_item cursor-default flex-row nav_menu_title w-28 h-12 justify-center items-center font-bold text-xl">
                     <p>Menu</p>
                 </div>
@@ -131,10 +131,10 @@ const Navbar = () => {
                     </Link>
                 </li>
             </ul>
-            <div onClick={handleMenuClick} className="nav_menu cursor-pointer ml-[1.5rem] 2xl:w-10 2xl:h-10 w-8 h-8 
-            bg-black text-white flex 2xl:hidden justify-center items-center relative z-[100]
+            <div onClick={handleMenuClick} className="nav_menu cursor-pointer ml-[1.5rem] xl:w-10 xl:h-10 w-8 h-8 
+            bg-black text-white flex xl:hidden justify-center items-center relative z-[100]
             ">
-                <i id="menu_button" className="ri-menu-4-line 2xl:ri-3x ri-1x" />
+                <i id="menu_button" className="ri-menu-4-line xl:ri-3x ri-1x" />
             </div>
         </div>
     </div>)

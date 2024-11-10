@@ -1,26 +1,34 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import '../css/projects.css'
 import ProjectCard from "./project-card";
 
 const Projects = () => {
 
-    const [array, setArray] = useState(
+    const [array,] = useState(
         [
             {
-                thumbnailSrc: "/projects.jpg",
+                thumbnailSrc: "/projects.webp",
                 title:"Flipcard",
-                category:"Mini game",
+                category:"Mini Game",
                 description:"Matching flip cards game",
                 link: '/flipcard',
                 src: 'https://github.com/Mentoriassssssss/portfolio'
             },
             {
-                thumbnailSrc: "/projects.jpg",
+                thumbnailSrc: "/projects.webp",
                 title:"Expense Tracker",
                 category:"Website",
                 description:"Fullstack expense tracker",
                 link: 'https://expensetracker-front.netlify.app/',
                 src: 'https://github.com/Mentoriassssssss/expense-tracker-front'
+            },
+            {
+                thumbnailSrc: "/projects.webp",
+                title:"Presentation Maker",
+                category:"Desktop App",
+                description:"A desktop app for creating presentations",
+                link: "https://github.com/darkplayer0211/PresentationMaker",
+                src: "https://github.com/darkplayer0211/PresentationMaker"
             }
         ]
     );

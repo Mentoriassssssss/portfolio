@@ -18,7 +18,6 @@ const cardsImage = [
 const FlipCardPage = () => {
 
     const [cards, setCards] = useState([]);
-    const [turns, setTurns] = useState(0);
     const [cardOne, setCardOne] = useState(null);
     const [cardTwo, setCardTwo] = useState(null);
     const [disabled, setDisabled] = useState(false);
@@ -33,7 +32,6 @@ const FlipCardPage = () => {
             .map((card) => ({ ...card, id: Math.random() }))
 
         setCards(shuffledCards)
-        setTurns(0)
     }
 
     const handleChoice = (card) => {
@@ -70,7 +68,6 @@ const FlipCardPage = () => {
     const resetTurn = () => {
         setCardOne(null);
         setCardTwo(null);
-        setTurns(turns => turns + 1);
         setDisabled(false);
     }
 
@@ -130,7 +127,7 @@ const FlipCardPage = () => {
             2xl:m-8 m-4
             cursor-pointer"
             onClick={() => navigate(-1)}>
-                <img src="/back.png" 
+                <img src="/back.png" alt="back"
                 className="
                 2xl:h-6 h-4
                 2xl:w-6 w-4"/>

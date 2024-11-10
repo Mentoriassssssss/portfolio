@@ -39,10 +39,10 @@
     transform: translate(0, .625rem)
 }
 
-.projects_grid_item_moreabout_github {
+.projects_grid_item_moreabout_item {
     transition: color .3s;
 }
-.projects_grid_item_moreabout_github:hover {
+.projects_grid_item_moreabout_item:hover {
     color: var(--first-color);
     transition: color .3s;
 }
@@ -54,7 +54,7 @@
     transition: color .3s;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1530px) {
     .projects_title::after {
         width: 2rem;
         height: 1.3rem;
@@ -62,6 +62,6 @@
     }
 
     .projects_grid_item_button {
-        transform: translate(calc(35vw - 3rem), calc(12rem - 50%));
+        transform: translate(0)
     }
 }

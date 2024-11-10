@@ -62,7 +62,7 @@ const About = () => {
                 border-4
                 border-black
                 z-[2]
-                " alt="Avatar" src="/avatar.jpg" />
+                " alt="Avatar" src="/avatar.webp" />
                     <div className="
                     about_avatar_shadow
                     absolute
@@ -83,7 +83,9 @@ const About = () => {
                 h-20
                 z-1
             ">
-                            <img className="
+                <img
+                loading="lazy"
+                className="
                     h-full
                     w-full
                     object-contain
