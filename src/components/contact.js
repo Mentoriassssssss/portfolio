@@ -264,19 +264,19 @@ const Contact = () => {
                 2xl:justify-start
                 justify-center
                 gap-4
-                2xl: gap-0
+                2xl:ml-4
                 items-center
                 2xl:w-[10rem]
                 w-full
             ">
-                    <div className="contact_note_social_icon h-8 w-8 p-2 flex justify-center items-center 2xl:ml-4 bg-[var(--text-color)]">
+                    <div className="contact_note_social_icon h-8 w-8 p-2 flex justify-center items-center bg-[var(--text-color)]">
                         <Link to={"https://www.facebook.com/lullaby.for.ur.soul/"}><img className="invert w-[1rem] h-[1rem]" src="/facebook-fill.svg" alt="Social icons" /></Link>
                     </div>
-                    <div className="contact_note_social_icon h-8 w-8 p-2 flex justify-center items-center 2xl:ml-4 bg-[var(--text-color)]">
-                        <Link href="https://www.linkedin.com/in/huy-ph%E1%BA%A1m-810108335/"><img className="invert w-[1rem] h-[1rem]" src="/github-line.svg" alt="Social icons" /></Link>
+                    <div className="contact_note_social_icon h-8 w-8 p-2 flex justify-center items-center bg-[var(--text-color)]">
+                        <Link to="https://www.linkedin.com/in/huy-ph%E1%BA%A1m-810108335/"><img className="invert w-[1rem] h-[1rem]" src="/github-line.svg" alt="Social icons" /></Link>
                     </div>
-                    <div className="contact_note_social_icon h-8 w-8 p-2 flex justify-center items-center 2xl:ml-4 bg-[var(--text-color)]">
-                        <Link href="https://github.com/Mentoriassssssss"><img className="invert w-[1rem] h-[1rem]" src="/github-line.svg" alt="Social icons" /></Link>
+                    <div className="contact_note_social_icon h-8 w-8 p-2 flex justify-center items-center bg-[var(--text-color)]">
+                        <Link to="https://github.com/Mentoriassssssss"><img className="invert w-[1rem] h-[1rem]" src="/linkedin-box-line.svg" alt="Social icons" /></Link>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@ const Intro = () => {
 
     return (
         <section id="intro"
-        className="
+            className="
         flex
         section
         w-full
@@ -71,24 +71,28 @@ const Intro = () => {
                     2xl:m-0
                     mt-4
                 ">
-                    <div className="intro_contacts w-[1.5rem] h-[1.5rem] 2xl:w-[3rem] 2xl:h-[3rem] flex justify-center items-center m-4 text-white bg-[var(--black-color-light)]">
-                        <Link to="https://github.com/Mentoriassssssss">
+                    <Link to="https://github.com/Mentoriassssssss">
+                        <div className="intro_contacts w-[1.5rem] h-[1.5rem] 2xl:w-[3rem] 2xl:h-[3rem] flex justify-center items-center m-4 text-white bg-[var(--black-color-light)]">
                             <img className="invert w-[1rem] h-[1rem] 2xl:w-[1.5rem] 2xl:h-[1.5rem]"
-                            src="/github-line.svg" alt="Social icons"/>
-                            </Link>
-                    </div>
-                    <div className="intro_contacts w-[1.5rem] h-[1.5rem] 2xl:w-[3rem] 2xl:h-[3rem] flex justify-center items-center m-4 text-white bg-[var(--black-color-light)]">
-                        <Link to="https://www.linkedin.com/in/huy-ph%E1%BA%A1m-810108335/">
+                                src="/github-line.svg" alt="Social icons" />
+
+                        </div>
+                    </Link>
+                    <Link to="https://www.linkedin.com/in/huy-ph%E1%BA%A1m-810108335/">
+                        <div className="intro_contacts w-[1.5rem] h-[1.5rem] 2xl:w-[3rem] 2xl:h-[3rem] flex justify-center items-center m-4 text-white bg-[var(--black-color-light)]">
+
                             <img className="invert w-[1rem] h-[1rem] 2xl:w-[1.5rem] 2xl:h-[1.5rem]"
-                            src="/linkedin-box-line.svg" alt="Social icons"/>
-                            </Link>
-                    </div>
-                    <div className="intro_contacts w-[1.5rem] h-[1.5rem] 2xl:w-[3rem] 2xl:h-[3rem] flex justify-center items-center m-4 text-white bg-[var(--black-color-light)]">
-                        <Link to="https://www.facebook.com/lullaby.for.ur.soul">
-                        <img className="invert w-[1rem] h-[1rem] 2xl:w-[1.5rem] 2xl:h-[1.5rem]"
-                        src="/facebook-fill.svg" alt="Social icons"/>
-                        </Link>
-                    </div>
+                                src="/linkedin-box-line.svg" alt="Social icons" />
+
+                        </div>
+                    </Link>
+                    <Link to="https://www.facebook.com/lullaby.for.ur.soul">
+                        <div className="intro_contacts w-[1.5rem] h-[1.5rem] 2xl:w-[3rem] 2xl:h-[3rem] flex justify-center items-center m-4 text-white bg-[var(--black-color-light)]">
+
+                            <img className="invert w-[1rem] h-[1rem] 2xl:w-[1.5rem] 2xl:h-[1.5rem]"
+                                src="/facebook-fill.svg" alt="Social icons" />
+                        </div>
+                    </Link>
                 </div>
             </div>
             <div className="
